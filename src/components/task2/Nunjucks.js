@@ -4,9 +4,6 @@ import "./data.css"
 const Nunjucks = () => {
     const [data,setData]=useState([])
 
-        const handleUserDetails=()=>{
-           
-        }
 
         useEffect(() => {
             fetch(`https://jsonplaceholder.typicode.com/users`)
@@ -14,7 +11,7 @@ const Nunjucks = () => {
              .then((data) => setData(data));
            }, []);
 
-console.log(data,"data")
+
 
   return (
 
