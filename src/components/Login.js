@@ -34,51 +34,15 @@ const Login = () => {
     if (userEmail == "" || userNumber == "") return;
 
     navigate("/thankyou", { state: data });
-    // validate()
+  
   };
 
-  const onSubmitHandler = (e) => {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-    e.preventDefault();
-    if (userNumber.trim() === "" || userEmail.trim() == "") {
-      alert("required both field");
-      // setError(true)
-    } else if (userEmail) {
-      return !regex.test(userEmail), alert("not a valid email");
-    } else {
-      alert(userNumber + " " + userEmail);
-      setUserEmail("");
-      setUserNumber("");
-    }
-  };
+  
 
-  // useEffect(() => {
-  //     console.log(formErrors);
-  //     if (Object.keys(formErrors).length === 0 && isSubmit) {
-  //       console.log(formValues);
-  //     }
-  //   }, [formErrors]);
 
-  const validate = (values) => {
-    const errors = {};
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-    if (!values.userEmail) {
-      errors.userEmail = "User email is required!";
-    } else if (!regex.test(values.userEmail)) {
-      errors.userEmail = "This is not a valid email format!";
-    }
-    if (!values.number) {
-      errors.number = "Number is required";
-    } else if (values.number.length < 0) {
-      errors.number = "Number must be more than 0 characters";
-    } else if (values.number.length > 10) {
-      errors.number = "Number cannot exceed more than 10 characters";
-    }
-    return errors;
-  };
 
   return (
-    // <form onSubmit={(e)=>{onSubmitHandler(e)}}>
+    
     <div className="main-container">
       <img src={logo} className="image" height="50%" width="50%"></img>
       <div className="right-container">
@@ -135,7 +99,7 @@ const Login = () => {
       </div>
     </div>
 
-    // </form>
+
   );
 };
 
