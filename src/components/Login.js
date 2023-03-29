@@ -12,8 +12,6 @@ const Login = () => {
 
   const navigate = useNavigate();
 
-  console.log(userEmail, userNumber);
-
   const data = {
     email: userEmail,
     number: userNumber,
