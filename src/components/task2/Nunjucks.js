@@ -106,11 +106,11 @@ console.log(data,"data")
                             <th>Longitude</th>
                             </tr>
                             {data?.map((items)=>{
-                                console.log("items",items)
+                 
                         let arr=["Aliyaview","Howemouth","Gwenborough"]
                         
                         if(arr.includes(items?.address?.city)){
-                            console.log("jai mata di",arr)
+                            
                             return(
                                 <tr >
                                 <td>{items.id}</td>
